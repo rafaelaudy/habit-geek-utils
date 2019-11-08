@@ -1,0 +1,39 @@
+{
+  "weeks": {
+    "y2019w1": {
+      "a_Partial": {
+        "name": "a_Partial",
+        "type": "Health",
+        "frequency": "3",
+        "habitSucceded": true,
+        "checked": [true, false, false, true, true, false, false]
+      },
+      "b_Week": {
+        "name": "b_Week",
+        "type": "Career",
+        "frequency": "5",
+        "habitFailed": true,
+        "checked": [false, true, true, false, true, false, false]
+      }
+    },
+    "y2019w2": {},
+    "y2019w3": {
+      "a_Partial": {
+        "name": "a_Partial",
+        "type": "Health",
+        "frequency": "3",
+        "habitSucceded": true,
+        "checked": [true, false, false, true, true, false, false]
+      },
+      "b_Week": {
+        "name": "b_Week",
+        "type": "Career",
+        "frequency": "5",
+        "habitFailed": true,
+        "checked": [false, true, true, false, true, false, false]
+      }
+    }
+  },
+  "currentWeek": "y2019w3",
+  "previousWeek": "y2019w2"
+}

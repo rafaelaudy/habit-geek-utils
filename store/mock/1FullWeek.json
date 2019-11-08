@@ -1,0 +1,21 @@
+{
+  "weeks": {
+    "y2019w3": {
+      "a_OneWeek": {
+        "name": "a_OneWeek",
+        "type": "Health",
+        "frequency": "3",
+        "habitSucceded": true,
+        "checked": [true, false, false, true, true, false, false]
+      },
+      "b_Full": {
+        "name": "b_Full",
+        "type": "Career",
+        "frequency": "5",
+        "habitFailed": true,
+        "checked": [false, true, true, false, true, false, false]
+      }
+    }
+  },
+  "currentWeek": "y2019w3"
+}
