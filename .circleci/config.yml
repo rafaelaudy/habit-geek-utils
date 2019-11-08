@@ -1,0 +1,32 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/node:7.10
+
+    branches:
+      only:
+        - master
+
+    working_directory: ~/repo
+
+    parallelism: 1
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+
+      - run: yarn test:ci
+
+      - run: npm publish
