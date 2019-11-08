@@ -2,7 +2,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:12.11
 
     branches:
       only:
@@ -29,4 +29,9 @@ jobs:
 
       - run: yarn test:ci
 
-      - run: npm publish
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish
