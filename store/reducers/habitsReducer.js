@@ -23,7 +23,7 @@ const getHabitStatus = (frequency, checked, isPreviousWeek) => {
     ? -todayIndex + 6
     : -todayIndex + 7;
   const checkedDays = checked.filter(checkedDay => checkedDay).length;
-
+  
   const habitSucceded = frequency <= checkedDays;
   const habitFailed = isPreviousWeek
     ? !habitSucceded
@@ -93,8 +93,7 @@ const habitsReducer = (state = getDefaultState(), { type, payload }) => {
 
         const { habitSucceded, habitFailed } = getHabitStatus(
           frequency,
-          checked,
-          true
+          checked
         );
 
         updatedWeekHabits[key] = {

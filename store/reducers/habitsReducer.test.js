@@ -106,6 +106,12 @@ describe("habitsReducer - updates statuses for current week", () => {
           habitFailed: false,
           habitSucceded: true
         },
+        noUpdates: {
+          checked: [true, true, true, false, false, false, false],
+          frequency: "4",
+          name: "noUpdates",
+          type: "hobby"
+        },
         failedNoChecks: {
           checked: [false, false, false, false, false, false, false],
           frequency: "4",
@@ -132,10 +138,12 @@ describe("habitsReducer - updates statuses for current week", () => {
   };
 
   it("updates checks", () => {
-    getTodayIndex.mockReturnValueOnce("5");
+    getTodayIndex.mockReturnValue("5");
     const state = habitsReducer(initialState, updateCurrentWeekStatuses());
     expect(state.weeks.y1w0.succeded.habitSucceded).toEqual(true);
     expect(state.weeks.y1w0.succeded.habitFailed).toEqual(false);
+    expect(state.weeks.y1w0.noUpdates.habitSucceded).toEqual(false);
+    expect(state.weeks.y1w0.noUpdates.habitFailed).toEqual(false);
     expect(state.weeks.y1w0.failedNoChecks.habitSucceded).toEqual(false);
     expect(state.weeks.y1w0.failedNoChecks.habitFailed).toEqual(true);
     expect(state.weeks.y1w0.failedWithChecks.habitSucceded).toEqual(false);
