@@ -46,6 +46,12 @@
         "frequency": "5",
         "habitFailed": true,
         "checked": [false, true, true, false, true, false, false]
+      },
+      "c_update_status_on_load": {
+        "name": "c_update_status_on_load",
+        "type": "Career",
+        "frequency": "4",
+        "checked": [true, false, false, false, false, false, false]
       }
     }
   },
