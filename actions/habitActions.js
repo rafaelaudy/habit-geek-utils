@@ -3,6 +3,11 @@ export const startNewWeek = () => ({
   type: START_NEW_WEEK
 });
 
+export const UPDATE_CURRENT_WEEK_STATUSES = "UPDATE_CURRENT_WEEK_STATUSES";
+export const updateCurrentWeekStatuses = () => ({
+  type: UPDATE_CURRENT_WEEK_STATUSES
+});
+
 export const SAVE_HABIT = "SAVE_HABIT";
 export const saveHabit = (id, name, type, frequency) => ({
   type: SAVE_HABIT,

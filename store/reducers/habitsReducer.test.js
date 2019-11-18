@@ -3,7 +3,8 @@ import {
   saveHabit,
   toggleDayHabit,
   startNewWeek,
-  deleteHabit
+  deleteHabit,
+  updateCurrentWeekStatuses
 } from "../../actions/habitActions";
 import { getCurrentWeek, getTodayIndex } from "../../utils/dateUtils";
 
@@ -90,6 +91,57 @@ describe("habitsReducer - start new week", () => {
     expect(state.weeks.y1w0.drive.habitFailed).toEqual(true);
     expect(state.weeks.y1w0.read.habitSucceded).toEqual(true);
     expect(state.weeks.y1w0.read.habitFailed).toEqual(false);
+  });
+});
+
+describe("habitsReducer - updates statuses for current week", () => {
+  const initialState = {
+    weeks: {
+      y1w0: {
+        succeded: {
+          checked: [true, false, false, false, false, false, false],
+          frequency: "1",
+          name: "succeded",
+          type: "hobby",
+          habitFailed: false,
+          habitSucceded: true
+        },
+        failedNoChecks: {
+          checked: [false, false, false, false, false, false, false],
+          frequency: "4",
+          name: "failedNoChecks",
+          type: "hobby"
+        },
+        failedWithChecks: {
+          checked: [true, true, false, false, false, false, false],
+          frequency: "5",
+          name: "failedWithChecks",
+          type: "hobby"
+        },
+        updatesChecks: {
+          checked: [true, true, false, false, false, false, false],
+          frequency: "5",
+          name: "updatesChecks",
+          type: "hobby",
+          habitFailed: false,
+          habitSucceded: false
+        }
+      }
+    },
+    currentWeek: "y1w0"
+  };
+
+  it("updates checks", () => {
+    getTodayIndex.mockReturnValueOnce("5");
+    const state = habitsReducer(initialState, updateCurrentWeekStatuses());
+    expect(state.weeks.y1w0.succeded.habitSucceded).toEqual(true);
+    expect(state.weeks.y1w0.succeded.habitFailed).toEqual(false);
+    expect(state.weeks.y1w0.failedNoChecks.habitSucceded).toEqual(false);
+    expect(state.weeks.y1w0.failedNoChecks.habitFailed).toEqual(true);
+    expect(state.weeks.y1w0.failedWithChecks.habitSucceded).toEqual(false);
+    expect(state.weeks.y1w0.failedWithChecks.habitFailed).toEqual(true);
+    expect(state.weeks.y1w0.updatesChecks.habitSucceded).toEqual(false);
+    expect(state.weeks.y1w0.updatesChecks.habitFailed).toEqual(true);
   });
 });
 

@@ -2,7 +2,8 @@ import {
   SAVE_HABIT,
   TOGGLE_DAY_HABIT,
   START_NEW_WEEK,
-  DELETE_HABIT
+  DELETE_HABIT,
+  UPDATE_CURRENT_WEEK_STATUSES
 } from "../../actions/habitActions";
 import { getCurrentWeek, getTodayIndex } from "../../utils/dateUtils";
 
@@ -79,6 +80,35 @@ const habitsReducer = (state = getDefaultState(), { type, payload }) => {
           ...state.weeks,
           [state.currentWeek]: previousWeekHabits,
           [currentWeek]: newWeekHabits
+        }
+      };
+    }
+
+    case UPDATE_CURRENT_WEEK_STATUSES: {
+      const updatedWeekHabits = {};
+
+      Object.keys(state.weeks[state.currentWeek]).forEach(key => {
+        const habit = state.weeks[state.currentWeek][key];
+        const { frequency, checked } = habit;
+
+        const { habitSucceded, habitFailed } = getHabitStatus(
+          frequency,
+          checked,
+          true
+        );
+
+        updatedWeekHabits[key] = {
+          ...habit,
+          habitSucceded,
+          habitFailed
+        };
+      });
+
+      return {
+        ...state,
+        weeks: {
+          ...state.weeks,
+          [state.currentWeek]: updatedWeekHabits,
         }
       };
     }
