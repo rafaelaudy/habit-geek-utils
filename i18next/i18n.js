@@ -12,7 +12,8 @@ const resources = {
       "my-habits-title": "How is the current week going{{username}}?",
       "my-habits-new-habit": "Add new habit!",
 
-      "save-habit-title": "New habit",
+      "save-habit-new-title": "New habit",
+      "save-habit-edit-title": "Edit habit",
       "save-habit-name": "Name:",
       "save-habit-name-validation": "Eerg... we kind of need this one, right?",
       "save-habit-type": "Type:",
@@ -68,7 +69,8 @@ const resources = {
       "my-habits-title": "Como a semana atual está indo,{{username}}?",
       "my-habits-new-habit": "Criar novo hábito!",
 
-      "save-habit-title": "Novo hábito",
+      "save-habit-new-title": "Novo hábito",
+      "save-habit-edit-title": "Editar hábito",
       "save-habit-name": "Nome:",
       "save-habit-name-validation":
         "Umm... esse campo meio que é importante, não?",
