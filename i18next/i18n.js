@@ -42,7 +42,7 @@ const resources = {
       "profile-save": "Save!",
 
       "week-description": "Week",
-      "date-days-short": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      "date-days-short": ["M", "T", "W", "T", "F", "S", "S"],
       "date-months-short": [
         "Jan",
         "Feb",
@@ -102,7 +102,7 @@ const resources = {
       "profile-save": "Salvar!",
 
       "week-description": "Semana",
-      "date-days-short": ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
+      "date-days-short": ["S", "T", "Q", "Q", "S", "S", "D"],
       "date-months-short": [
         "Jan",
         "FeV",
