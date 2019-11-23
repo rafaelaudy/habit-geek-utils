@@ -1,6 +1,6 @@
 {
   "name": "@rafael.audy/habit-geek-utils",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Utils files for habit-geek mobile and web projects",
   "main": "index.js",
   "scripts": {

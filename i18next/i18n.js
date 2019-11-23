@@ -8,6 +8,7 @@ const resources = {
       "nav-my-habits": "My Habits",
       "nav-history": "History",
       "nav-profile": "Profile",
+      "nav-login": "Login",
 
       "my-habits-title": "How is the current week going{{username}}?",
       "my-habits-new-habit": "Add new habit!",
@@ -41,6 +42,26 @@ const resources = {
       "profile-avatar-alt-desc": "Avatar, not really important. Don't worry!",
       "profile-save": "Save!",
 
+      "login-title": "Login",
+      "user-form-email": "Email",
+      "user-form-email-validation": "Needs email.",
+      "user-form-password": "Password",
+      "user-form-password-validation": "Password.",
+      "login-login": "Login",
+      "login-sign-up-label": "Don't have an account?",
+      "login-sign-up": "Sign up",
+      "login-forgot-password-label": "",
+      "login-forgot-password": "Forgot password?",
+
+      "forgot-password-email-sent-message":
+        "Please check your email for instructions to reset your password.",
+      "forgot-password-email-not-sent":
+        "We couldn’t find an account with that email address.",
+      "forgot-password-title": "Forgot your password?",
+      "forgot-password-try-again-label": "",
+      "forgot-password-try-again": "Want to try again?",
+      "forgot-password-forgot-password": "Reset password",
+
       "week-description": "Week",
       "date-days-short": ["M", "T", "W", "T", "F", "S", "S"],
       "date-months-short": [
@@ -65,6 +86,7 @@ const resources = {
       "nav-my-habits": "Meus Hábitos",
       "nav-history": "Histórico",
       "nav-profile": "Perfil",
+      "nav-login": "Login",
 
       "my-habits-title": "Como a semana atual está indo,{{username}}?",
       "my-habits-new-habit": "Criar novo hábito!",
@@ -100,6 +122,26 @@ const resources = {
       "profile-avatar-alt-desc":
         "Avatar, não é muito importante. Não se preocupe!",
       "profile-save": "Salvar!",
+
+      "login-title": "Login",
+      "user-form-email": "Email",
+      "user-form-email-validation": "Needs email.",
+      "user-form-password": "Password",
+      "user-form-password-validation": "Password.",
+      "login-login": "Login",
+      "login-sign-up-label": "Don't have an account?",
+      "login-sign-up": "Sign up",
+      "login-forgot-password-label": "",
+      "login-forgot-password": "Forgot password?",
+
+      "forgot-password-email-sent-message":
+        "Please check your email for instructions to reset your password.",
+      "forgot-password-email-not-sent":
+        "We couldn’t find an account with that email address.",
+      "forgot-password-title": "Forgot your password?",
+      "forgot-password-try-again-label": "",
+      "forgot-password-try-again": "Want to try again?",
+      "forgot-password-forgot-password": "Reset password",
 
       "week-description": "Semana",
       "date-days-short": ["S", "T", "Q", "Q", "S", "S", "D"],
