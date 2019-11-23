@@ -1,10 +1,15 @@
 import userReducer from "./userReducer";
-import { registerUser } from "../../actions/userActions";
+import { saveUser, saveSession } from "../../actions/userActions";
 
 describe("userReducer", () => {
-  it("registers the user", () => {
-    const state = userReducer(undefined, registerUser("rafa", "avatar"));
+  it("saves the user", () => {
+    const state = userReducer({}, saveUser("rafa", "avatar"));
     expect(state).toEqual({ name: "rafa", avatar: "avatar" });
+  });
+
+  it("saves the jwt", () => {
+    const state = userReducer({}, saveSession("jwt"));
+    expect(state).toEqual({ jwt: "jwt" });
   });
 
   it("returns state when no recognized action is provided", () => {
