@@ -41,6 +41,7 @@ const resources = {
       "profile-avatar": "Avatar:",
       "profile-avatar-alt-desc": "Avatar, not really important. Don't worry!",
       "profile-save": "Save!",
+      "profile-logout": "Logout",
 
       "login-title": "Login",
       "user-form-email": "Email",
@@ -48,7 +49,7 @@ const resources = {
       "user-form-password": "Password",
       "user-form-password-validation": "Password.",
       "login-login": "Login",
-      "login-sign-up-label": "Don't have an account?",
+      "login-sign-up-label": "Don't have an account? ",
       "login-sign-up": "Sign up",
       "login-forgot-password-label": "",
       "login-forgot-password": "Forgot password?",
@@ -61,6 +62,11 @@ const resources = {
       "forgot-password-try-again-label": "",
       "forgot-password-try-again": "Want to try again?",
       "forgot-password-forgot-password": "Reset password",
+
+      "sign-up-title": "Sign up",
+      "sign-up-sign-up": "Register",
+      "sign-up-go-to-login-label": "Already have a login? ",
+      "sign-up-go-to-login": "Login",
 
       "week-description": "Week",
       "date-days-short": ["M", "T", "W", "T", "F", "S", "S"],
@@ -122,6 +128,7 @@ const resources = {
       "profile-avatar-alt-desc":
         "Avatar, não é muito importante. Não se preocupe!",
       "profile-save": "Salvar!",
+      "profile-logout": "Logout",
 
       "login-title": "Login",
       "user-form-email": "Email",
@@ -129,7 +136,7 @@ const resources = {
       "user-form-password": "Password",
       "user-form-password-validation": "Password.",
       "login-login": "Login",
-      "login-sign-up-label": "Don't have an account?",
+      "login-sign-up-label": "Don't have an account? ",
       "login-sign-up": "Sign up",
       "login-forgot-password-label": "",
       "login-forgot-password": "Forgot password?",
@@ -142,6 +149,11 @@ const resources = {
       "forgot-password-try-again-label": "",
       "forgot-password-try-again": "Want to try again?",
       "forgot-password-forgot-password": "Reset password",
+
+      "sign-up-title": "Sign up",
+      "sign-up-sign-up": "Register",
+      "sign-up-go-to-login-label": "Already have a login? ",
+      "sign-up-go-to-login": "Login",
 
       "week-description": "Semana",
       "date-days-short": ["S", "T", "Q", "Q", "S", "S", "D"],
